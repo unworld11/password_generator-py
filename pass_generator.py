@@ -1,4 +1,5 @@
 import random
+import time
 passw = ["1","2","3","4","5","6","7","8","9","0"]
 
 for i in range(32,127):
@@ -15,7 +16,8 @@ for i in range(us_input):
         a = str(random.choice(passw))
         pass_gen += a
         
-   
-    
+
+print("Generating Password....")
+time.sleep(2)
 print(pass_gen)    
 print("\n")
