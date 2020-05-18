@@ -5,17 +5,17 @@ for i in range(32,127):
     passw.append(chr(i))
                 
 us_input = int(input("Enter Number of characters :"))
+pass_gen = " "
 
 for i in range(us_input):
     if us_input < 7:
         print("Password has to be greater than 7 characters for safety \n : )")
         break
     else:
-        pass_gen = " "
         a = str(random.choice(passw))
         pass_gen += a
         
    
     
-    print(pass_gen,end="")    
+print(pass_gen)    
 print("\n")
