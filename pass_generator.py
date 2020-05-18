@@ -1,17 +1,17 @@
 import random
 passw = ["1","2","3","4","5","6","7","8","9","0"]
 
-for i in range(32,127):
+for i in range(32,127):                #generates a list of all possible characters
     passw.append(chr(i))
                 
-us_input = int(input("Enter Number of characters :"))
+us_input = int(input("Enter Number of characters :"))         
 
 for i in range(us_input):
-    if us_input < 7:
+    if us_input < 7:                 #SAFETY
         print("Password has to be greater than 7 characters for safety \n : )")
         break
     else:
-        pass_gen = " "
+        pass_gen = " "                  #Empty string
         a = str(random.choice(passw))
         pass_gen += a
         
