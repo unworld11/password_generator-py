@@ -1,7 +1,8 @@
 import random
 import time
+import sys
 
-print("PASSWORD GENERATOR 1.0.3 ")
+print("PASSWORD GENERATOR 1.0.4 ")
 passw = ["1","2","3","4","5","6","7","8","9","0"]
 
 for i in range(32,127):
@@ -10,7 +11,7 @@ for i in range(32,127):
 def pass_generator():
     
     us_input = int(input("Enter Number of characters :"))
-    pass_gen = " "
+    pass_gen = ""
 
                         
 
@@ -23,8 +24,15 @@ def pass_generator():
             pass_gen += a
         
 
-    print("Generating Password....")
-    time.sleep(2)
+    print("Generating Password....")          
+
+    animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
+
+    for i in range(len(animation)):
+        time.sleep(0.2)
+        sys.stdout.write("\r" + animation[i % len(animation)])
+        sys.stdout.flush()
+        
     print("Your Password is : ",pass_gen)    
     print("\n")
 
@@ -35,7 +43,6 @@ def pass_generator():
 
         #Creating a file
         password = open("password.txt","x")
-        password.close()
 
         password = open("password.txt","a")
         password.write(user_service)
