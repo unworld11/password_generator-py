@@ -47,8 +47,7 @@ def pass_generator():
         user_service = input("Enter Service (Gmail etc.) : ")
 
         #Creating a file
-        password = open("password.txt","x")
-
+        
         password = open("password.txt","a")
         password.write(user_service)
         password.write(pass_gen)
