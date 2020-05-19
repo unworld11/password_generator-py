@@ -52,5 +52,7 @@ def pass_generator():
         password.write(user_service)
         password.write(pass_gen)
         password.close()
+        print("A File containing password has been created on your machine ")
 
 pass_generator()
+
