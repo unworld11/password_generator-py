@@ -14,14 +14,18 @@ def pass_generator():
     pass_gen = ""
 
                         
-
-    for i in range(us_input):
+    j=0
+    while j in range(us_input):
         if us_input < 7:
             print("Password has to be greater than 7 characters for safety \n : )")
             break
+            
+            
+            
         else:
             a = str(random.choice(passw))
             pass_gen += a
+            j+=1
         
 
     print("Generating Password....")          
