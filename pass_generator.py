@@ -32,7 +32,8 @@ def pass_generator():
         time.sleep(0.2)
         sys.stdout.write("\r" + animation[i % len(animation)])
         sys.stdout.flush()
-        
+    
+    print("\n")
     print("Your Password is : ",pass_gen)    
     print("\n")
 
