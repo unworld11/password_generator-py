@@ -1,3 +1,4 @@
+
 import random
 import time
 import sys
@@ -18,6 +19,7 @@ def pass_generator():
     while j in range(us_input):
         if us_input < 7:
             print("Password has to be greater than 7 characters for safety \n : )")
+            return 0
             break
             
             
@@ -55,4 +57,5 @@ def pass_generator():
         print("A File containing password has been created on your machine ")
 
 pass_generator()
+
 
