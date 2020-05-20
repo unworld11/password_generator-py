@@ -3,7 +3,26 @@ import random
 import time
 import sys
 
-print("PASSWORD GENERATOR 1.0.4 ")
+
+#HEADER
+
+for i in range(20):
+    print("_",end="")
+print()
+
+print(" PASSWORD GENERATOR 1.0.5   ")
+
+for i in range(20):
+    print("_",end="")
+print()
+print()
+
+
+
+
+#Main Body
+
+
 passw = ["1","2","3","4","5","6","7","8","9","0"]
 
 for i in range(32,127):
@@ -11,7 +30,7 @@ for i in range(32,127):
 
 def pass_generator():
     
-    us_input = int(input("Enter Number of characters :"))
+    us_input = int(input("Enter Number of characters you want in password:"))
     pass_gen = ""
 
                         
@@ -45,16 +64,21 @@ def pass_generator():
 
     ans=input("Do you want to save our password remembering services ?")
     if ans == "yes" or ans == "Yes" or ans == "y":
-        user_name = input('Enter name : ')
+        user_name = input('Enter username : ')
         user_service = input("Enter Service (Gmail etc.) : ")
 
         #Creating a file
         
-        password = open("password.txt","a")
+        password = open("pass.txt","a")
         password.write(user_service)
+        password.write("username : ")
+        password.write(user_name)
+        password.write("Password :")
         password.write(pass_gen)
         password.close()
         print("A File containing password has been created on your machine ")
+
+
 
 pass_generator()
 
