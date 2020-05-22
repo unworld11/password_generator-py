@@ -1,4 +1,4 @@
-
+ 
 import random
 import time
 import sys
@@ -44,8 +44,7 @@ def pass_generator():
             
             
         else:
-            a = str(random.choice(passw))
-            pass_gen += a
+            pass_gen += str(random.choice(passwd))
             j+=1
         
 
@@ -54,17 +53,30 @@ def pass_generator():
     animation = ["[■□□□□□□□□□]","[■■□□□□□□□□]", "[■■■□□□□□□□]", "[■■■■□□□□□□]", "[■■■■■□□□□□]", "[■■■■■■□□□□]", "[■■■■■■■□□□]", "[■■■■■■■■□□]", "[■■■■■■■■■□]", "[■■■■■■■■■■]"]
 
     for i in range(len(animation)):
+        
         time.sleep(0.2)
+        
         sys.stdout.write("\r" + animation[i % len(animation)])
+        
         sys.stdout.flush()
     
+    
     print("\n")
+    
     print("Your Password is : ",pass_gen)    
+    
     print("\n")
+    
 
+    #FILE 
+
+    
     ans=input("Do you want to save our password remembering services ?")
+    
     if ans == "yes" or ans == "Yes" or ans == "y":
+        
         user_name = input('Enter username : ')
+        
         user_service = input("Enter Service (Gmail etc.) : ")
 
         #Creating a file
@@ -76,10 +88,11 @@ def pass_generator():
         password.write("Password :")
         password.write(pass_gen)
         password.close()
+        
         print("A File containing password has been created on your machine ")
 
 
-
+#Calling Function
 pass_generator()
 
 
